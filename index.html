@@ -1,97 +1,251 @@
 <!doctype html>
 <html lang="pt-br">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Higor Cavalcanti — Dev Full-Stack</title>
-  <meta name="description" content="Higor Cavalcanti — Estudante de Eng. de Software (UPE). Node.js e React (JS/TS). Projetos web e mobile.">
-  <style>
-    body{font-family:system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,'Helvetica Neue',Arial,sans-serif;max-width:920px;margin:48px auto;padding:0 20px;line-height:1.6}
-    .pill{display:inline-block;padding:.25rem .6rem;border:1px solid #ddd;border-radius:999px;margin:.15rem .25rem;font-size:.9rem;white-space:nowrap}
-    h1{margin-bottom:.25rem} h2{margin-top:2rem}
-    ul{padding-left:1.2rem}
-    .grid{display:grid;gap:14px;grid-template-columns:repeat(auto-fit,minmax(260px,1fr))}
-    .card{border:1px solid #eee;border-radius:14px;padding:16px}
-    .muted{color:#555}
-    a{text-decoration:none} a:hover{text-decoration:underline}
-    footer{margin-top:32px;color:#777;font-size:.95rem}
-  </style>
+    <meta charset="utf-t" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Higor Cavalcanti — Desenvolvedor Full-Stack</title>
+    <meta name="description" content="Portfólio de Higor Cavalcanti, estudante de Engenharia de Software na UPE, com projetos em Node.js, React, TypeScript e Flutter.">
+    
+    <style>
+        :root {
+            --bg-color: #121212;
+            --card-color: #1e1e1e;
+            --text-color: #e0e0e0;
+            --primary-color: #bb86fc;
+            --muted-color: #888;
+            --border-color: #333;
+        }
+
+        body {
+            font-family: system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, 'Helvetica Neue', Arial, sans-serif;
+            max-width: 960px;
+            margin: 48px auto;
+            padding: 0 20px;
+            line-height: 1.6;
+            background-color: var(--bg-color);
+            color: var(--text-color);
+        }
+
+        a {
+            color: var(--primary-color);
+            text-decoration: none;
+            font-weight: 600;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+        h1, h2 {
+            border-bottom: 2px solid var(--primary-color);
+            padding-bottom: 10px;
+            margin-bottom: 24px;
+        }
+        
+        h1 { font-size: 2.5rem; }
+        h2 { margin-top: 3rem; font-size: 1.8rem; }
+        h3 { margin-bottom: 8px; font-size: 1.2rem; }
+
+        .header-content {
+            display: flex;
+            align-items: center;
+            gap: 24px;
+            flex-wrap: wrap;
+        }
+
+        .header-content img {
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            border: 3px solid var(--primary-color);
+            object-fit: cover;
+        }
+
+        .header-text h1 {
+            margin: 0;
+            border: none;
+            padding: 0;
+        }
+
+        .muted {
+            color: var(--muted-color);
+            font-size: 1.1rem;
+        }
+
+        .grid {
+            display: grid;
+            gap: 20px;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+        }
+
+        .card {
+            background-color: var(--card-color);
+            border: 1px solid var(--border-color);
+            border-radius: 14px;
+            padding: 20px;
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+        }
+        
+        .pill {
+            display: inline-block;
+            padding: .3rem .7rem;
+            border: 1px solid var(--border-color);
+            background-color: #2a2a2a;
+            border-radius: 999px;
+            margin: .2rem;
+            font-size: .85rem;
+            white-space: nowrap;
+            font-weight: 500;
+        }
+
+        .project-card img {
+            width: 100%;
+            border-radius: 8px;
+            margin-bottom: 16px;
+            aspect-ratio: 16 / 9;
+            object-fit: cover;
+            border: 1px solid var(--border-color);
+        }
+        
+        .project-links a {
+            margin-right: 12px;
+        }
+
+        .social-links {
+            margin-top: 16px;
+        }
+        .social-links a {
+            margin-right: 16px;
+        }
+        .social-links svg {
+            width: 28px;
+            height: 28px;
+            fill: var(--text-color);
+            transition: fill 0.2s ease;
+        }
+        .social-links a:hover svg {
+            fill: var(--primary-color);
+        }
+
+        footer {
+            margin-top: 48px;
+            text-align: center;
+            color: var(--muted-color);
+            font-size: .95rem;
+        }
+    </style>
 </head>
 <body>
-  <header>
-    <h1>Higor Cavalcanti</h1>
-    <p class="muted">Estudante de Engenharia de Software (UPE) · <strong>Full-Stack</strong> com maior domínio em <strong>Node.js</strong> e <strong>React</strong> (JS/TS)</p>
-  </header>
+    <header>
+        <div class="header-content">
+            <img src="profile.jpg" alt="Foto de Higor Cavalcanti">
+            <div class="header-text">
+                <h1>Higor Cavalcanti</h1>
+                <p class="muted">Estudante de Engenharia de Software (UPE) <br> Desenvolvedor Full-Stack focado em <strong>Node.js</strong> e <strong>React (JS/TS)</strong>.</p>
+                <div class="social-links">
+                    <a href="https://github.com/higucavalcanti" target="_blank" title="GitHub">
+                        <svg viewBox="0 0 24 24"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.91 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
+                    </a>
+                    <a href="https://www.linkedin.com/in/higor-cavalcanti-b77794267" target="_blank" title="LinkedIn">
+                        <svg viewBox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
+                    </a>
+                    <a href="mailto:cavalcanti.higorl@gmail.com" title="E-mail">
+                        <svg viewBox="0 0 24 24"><path d="M0 3v18h24v-18h-24zm21.518 2l-9.518 7.713-9.518-7.713h19.036zm-19.518 14v-11.817l10 8.104 10-8.104v11.817h-20z"/></svg>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </header>
 
-  <section>
-    <h2>Habilidades Técnicas</h2>
-    <div class="grid">
-      <div class="card">
-        <strong>Back-End</strong><br/>
-        <span class="pill">Node.js</span>
-        <span class="pill">Java</span>
-        <span class="pill">Spring Boot</span>
-        <span class="pill">Python</span>
-        <span class="pill">Kotlin</span>
-      </div>
-      <div class="card">
-        <strong>Front-End</strong><br/>
-        <span class="pill">React</span>
-        <span class="pill">TypeScript</span>
-        <span class="pill">JavaScript</span>
-        <span class="pill">HTML</span>
-        <span class="pill">CSS</span>
-      </div>
-      <div class="card">
-        <strong>Mobile</strong><br/>
-        <span class="pill">Flutter (Dart)</span>
-        <span class="pill">React Native</span>
-      </div>
-      <div class="card">
-        <strong>Banco de Dados</strong><br/>
-        <span class="pill">PostgreSQL</span>
-        <span class="pill">MySQL</span>
-      </div>
-      <div class="card">
-        <strong>Ferramentas & Outros</strong><br/>
-        <span class="pill">Git</span>
-        <span class="pill">Figma</span>
-        <span class="pill">Testes Manuais/Exploratórios</span>
-        <span class="pill">Engenharia de Requisitos</span>
-        <span class="pill">Documentação de Software</span>
-      </div>
-      <div class="card">
-        <strong>Metodologias Ageis</strong><br/>
-        <span class="pill">Scrum</span>
-        <span class="pill">KanBan</span>
-      </div>
-      <div class="card">
-        <strong>Aprofundando</strong><br/>
-        <span class="pill">Liderança</span>
-        <span class="pill">IoT</span>
-        <span class="pill">Inteligência Artificial</span>
-      </div>
-    </div>
-  </section>
+    <section>
+        <h2>Meus Projetos</h2>
+        <div class="grid">
+            <div class="card project-card">
+                <img src="lactino.png" alt="Interface do sistema Lactino">
+                <h3>Lactino - Gestão para Laticínios</h3>
+                <p class="muted">Sistema web completo para gestão de produção, estoque, vendas e CRM para produtores de laticínios.</p>
+                <p>
+                    <span class="pill">React</span><span class="pill">TypeScript</span><span class="pill">Vite</span><span class="pill">Node.js</span>
+                </p>
+                <div class="project-links">
+                    <a href="https://github.com/the-boys-technology/lactino-frontend" target="_blank">Ver no GitHub &rarr;</a>
+                </div>
+            </div>
+            
+            <div class="card project-card">
+                <img src="angels.png" alt="Interface do sistema Angels">
+                <h3>Angels System - Monitoramento de Gestantes</h3>
+                <p class="muted">Plataforma para monitoramento e acompanhamento de gestantes, em parceria com a UPE e dotLAB Brazil.</p>
+                <p>
+                    <span class="pill">React</span><span class="pill">TypeScript</span><span class="pill">Styled Components</span>
+                </p>
+                <div class="project-links">
+                    <a href="https://github.com/higucavalcanti/angels-system-frontend" target="_blank">Ver no GitHub &rarr;</a>
+                </div>
+            </div>
+            
+            <div class="card project-card">
+                <img src="marcasom.png" alt="Interface do aplicativo MarcaSom">
+                <h3>MarcaSom - App para Músicos</h3>
+                <p class="muted">Aplicativo móvel que conecta clientes a artistas, facilitando o agendamento de shows e eventos.</p>
+                <p>
+                    <span class="pill">Flutter</span><span class="pill">Dart</span>
+                </p>
+                <div class="project-links">
+                    <a href="https://github.com/higucavalcanti/marcasom" target="_blank">Ver no GitHub &rarr;</a>
+                </div>
+            </div>
+            
+             <div class="card project-card">
+                <img src="ebook.png" alt="Interface do E-book Interativo">
+                <h3>E-book Interativo sobre Evolução</h3>
+                <p class="muted">E-book acadêmico e interativo sobre evolução e biodiversidade, com animações e interações táteis.</p>
+                <p>
+                    <span class="pill">Lua</span><span class="pill">Solar2D</span>
+                </p>
+                <div class="project-links">
+                    <a href="https://github.com/higucavalcanti/e-book" target="_blank">Ver no GitHub &rarr;</a>
+                </div>
+            </div>
+        </div>
+    </section>
 
-  <section>
-    <h2>Sobre</h2>
-    <p>
-      Sou estudante de Engenharia de Software na UPE, com maior domínio em <strong>Node.js</strong> e <strong>React</strong> (JavaScript/TypeScript).
-      Tenho interesse em desenvolvimento web e mobile, boas práticas de engenharia e colaboração em times ágeis.
-    </p>
-  </section>
+    <section>
+        <h2>Habilidades Técnicas</h2>
+        <div class="grid">
+            <div class="card">
+                <strong>Back-End</strong><br/>
+                <span class="pill">Node.js</span><span class="pill">Java & Spring Boot</span><span class="pill">Python</span><span class="pill">Kotlin</span>
+            </div>
+            <div class="card">
+                <strong>Front-End</strong><br/>
+                <span class="pill">React</span><span class="pill">TypeScript</span><span class="pill">JavaScript</span><span class="pill">HTML & CSS</span>
+            </div>
+            <div class="card">
+                <strong>Mobile</strong><br/>
+                <span class="pill">Flutter (Dart)</span><span class="pill">React Native</span><span class="pill">Lua (Solar2D)</span>
+            </div>
+            <div class="card">
+                <strong>Bancos de Dados</strong><br/>
+                <span class="pill">PostgreSQL</span><span class="pill">MySQL</span>
+            </div>
+            <div class="card">
+                <strong>Ferramentas e Conceitos</strong><br/>
+                <span class="pill">Git</span><span class="pill">Figma</span><span class="pill">Testes de Software</span><span class="pill">Eng. de Requisitos</span>
+            </div>
+             <div class="card">
+                <strong>Metodologias</strong><br/>
+                <span class="pill">Scrum</span><span class="pill">Kanban</span>
+            </div>
+        </div>
+    </section>
 
-  <section>
-    <h2>Contato</h2>
-    <p>
-      <a href="mailto:cavalcanti.higor1@gmail.com">cavalcanti.higor1@gmail.com</a> •
-      <a href="https://github.com/higucavalcanti">GitHub</a> •
-      <a href="www.linkedin.com/in/higor-cavalcanti-b77794267">LinkedIn</a>
-    </p>
-  </section>
-
-  <footer>© <span id="y"></span> Higor Cavalcanti</footer>
-  <script>document.getElementById('y').textContent = new Date().getFullYear()</script>
+    <footer>© <span id="y"></span> Higor Cavalcanti</footer>
+    <script>document.getElementById('y').textContent = new Date().getFullYear()</script>
 </body>
 </html>
